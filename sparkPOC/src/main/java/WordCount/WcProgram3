@@ -1,0 +1,10 @@
+val data1=sc.textFile("/input.txt");
+
+val data2=data1.flatMap(_.split(" "))
+
+
+val data3=data2.map((_,1))
+
+val data4= data3.reduceByKey(_+_)
+
+data4.foreach(println)
